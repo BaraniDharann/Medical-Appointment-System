@@ -19,7 +19,10 @@ connectDB();
 connectCloudinary();
 // middlewares
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+	origin: ['http://localhost:5173', 'http://localhost:5174', process.env.FRONTEND_URL, process.env.ADMIN_URL],
+	credentials: true
+}));
 
 // api endpoints
 app.use('/api/admin', adminRouter);
@@ -33,3 +36,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => console.log('Server Started', port));
+
+export default app;

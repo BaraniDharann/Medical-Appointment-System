@@ -39,7 +39,7 @@ const Navbar = () => {
             <hr className='border-none outline-none h-0.5 bg-[#5f6FFF] w-3/5 m-auto hidden'/>
           </NavLink>
 
-          <li onClick={() => window.open('http://localhost:5174', '_blank')} className='py-1 cursor-pointer text-[#5f6FFF] font-semibold'>Admin Panel</li>
+          <li onClick={() => window.open(import.meta.env.VITE_ADMIN_URL || 'http://localhost:5174', '_blank')} className='py-1 cursor-pointer text-[#5f6FFF] font-semibold'>Admin Panel</li>
         </ul>
         <div className='flex items-center gap-4'>
           {
@@ -70,7 +70,7 @@ const Navbar = () => {
               <NavLink   onClick={()=>setShowMenu(false)} to='/doctors'><p className='px-4 py-2  rounded  inline-block'>ALL DOCTORS</p> </NavLink>
               <NavLink   onClick={()=>setShowMenu(false)} to='/about'> <p className='px-4 py-2  rounded  inline-block'>ABOUT</p> </NavLink>
               <NavLink   onClick={()=>setShowMenu(false)} to='/contact'><p className='px-4 py-2  rounded  inline-block'>CONTACT</p> </NavLink>
-              <p onClick={() => { setShowMenu(false); window.open('http://localhost:5174', '_blank'); }} className='px-4 py-2 rounded inline-block cursor-pointer text-[#5f6FFF] font-semibold'>ADMIN PANEL</p>
+              <p onClick={() => { setShowMenu(false); window.open(import.meta.env.VITE_ADMIN_URL || 'http://localhost:5174', '_blank'); }} className='px-4 py-2 rounded inline-block cursor-pointer text-[#5f6FFF] font-semibold'>ADMIN PANEL</p>
               
             </ul>
           </div>
