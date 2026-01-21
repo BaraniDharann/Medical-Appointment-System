@@ -3,7 +3,6 @@ import { doctors } from '../assets/assets';
 import axios from 'axios';
 export const AppContex=createContext ()
 import { toast } from "react-toastify";
-import { set } from "mongoose";
 
 const AppContexProvider=(props)=>{
    
